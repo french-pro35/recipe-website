@@ -1,0 +1,121 @@
+/* Réinitialisation de certaines propriétés par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #a6c1ee; /* Fond global en bleu clair */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #ff6f61; /* Fond de la bannière en rouge-orange */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffcc00; /* Écriture du titre en jaune */
+}
+
+/* Section d'introduction */
+.intro {
+    margin: 40px 20px;
+    text-align: center;
+}
+
+.intro img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Historique, règles, conclusion */
+.historique, .regles, .conclusion {
+    margin: 40px 20px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #ff6f61; /* Titres des sections en rouge-orange */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Tableaux */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #ff6f61; /* En-tête du tableau en rouge-orange */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Boutons (si vous en ajoutez) */
+button {
+    background-color: #ff6f61; /* Boutons en rouge-orange */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

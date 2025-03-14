@@ -1,0 +1,163 @@
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* Fond bleuté */
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #ff6f61; /* Rouge*/
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Main content */
+main {
+    width: 80%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* Section des ingrédients */
+.ingredients-section {
+    margin-top: 20px;
+}
+
+.ingredients-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 20px;
+}
+
+.ingredient-list {
+    flex: 1;
+    max-width: 40%;
+    text-align: left;
+}
+
+.image-flottante {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Listes */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ol {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustement des ingrédients selon le nombre de personnes */
+label {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #555;
+}
+
+select {
+    font-size: 1.2em;
+    padding: 8px;
+    border: 2px solid #ff6f61;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+}
+select:hover {
+    border-color: #ff6f61; /* Garde la même couleur au survol */
+}
+
+#ingredients {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Styles pour les pages de connexion */
+#connexionForm, #inscriptionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#connexionForm label, #inscriptionForm label {
+    font-size: 1.1em;
+    color: #555;
+}
+
+#connexionForm input, #inscriptionForm input {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #ff6f61;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+}
+
+#connexionForm button, #inscriptionForm button {
+    background-color: #ff6f61; /* Rouge-orange vif */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#messageConnexion, #messageInscription {
+    font-size: 1.1em;
+    margin-top: 10px;
+    color: #ff6f61; /* Rouge-orange pour les messages */
+}
