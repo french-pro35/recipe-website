@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recette de Far Breton</title>
+    <link rel="stylesheet" href="css_recette.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Recette de Far Breton</h1>
+		 <nav>
+            <a href="badminton.html">Badminton</a>
+			<a href="volley.html">Volley</a>
+            <a href="sources.html">Sources</a>
+         </nav>
+    </header>
+    
+    <main>
+        <section class="ingredients-section">
+            <h2>Ingrédients</h2>
+            <label for="personnes">Nombre de personnes :</label>
+            <select id="personnes" onchange="mettreAJourIngredients()">
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+            </select>
+            
+            <div class="ingredients-container">
+                <ul id="ingredients" class="ingredient-list">
+                    <li><span data-base="500">500</span> g de lait entier</li>
+                    <li><span data-base="120">120</span> g de farine T55 ou fécule de maïs</li>
+                    <li><span data-base="85">85</span> g de sucre semoule</li>
+                    <li><span data-base="4">4</span> œufs</li>
+                    <li><span data-base="300">300</span> g de pruneaux</li>
+                    <li><span data-base="40">40</span> g de beurre</li>
+                    <li><span data-base="25">25</span> g de rhum</li>
+                    <li><span data-base="0.4">0.4</span> g de sel</li>
+                </ul>
+                <img src="far.jpeg" alt="Far Breton" class="image-flottante">
+            </div>
+        </section>
+        
+        <section class="instructions-section">
+            <h2>Préparation</h2>
+            <ol>
+                <li>Préchauffez votre four à 180°C.</li>
+                <li>Dans un saladier, mélangez la farine, le sucre et le sel.</li>
+                <li>Ajoutez les œufs un par un en mélangeant bien.</li>
+                <li>Incorporez le lait petit à petit pour éviter les grumeaux.</li>
+                <li>Ajoutez le rhum et l'extrait de vanille si souhaité.</li>
+                <li>Beurrez un plat et disposez les pruneaux au fond.</li>
+                <li>Versez la pâte sur les pruneaux.</li>
+                <li>Enfournez pendant environ 45 minutes jusqu'à ce que le far soit doré.</li>
+            </ol>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Bon appétit !</p>
+    </footer>
+</body>
+</html>
