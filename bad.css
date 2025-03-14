@@ -8,18 +8,44 @@
 /* Styles généraux */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #a6c1ee; /* Fond global en bleu clair */
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     color: #333;
     line-height: 1.6;
+    animation: backgroundChange 10s infinite alternate;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    }
+    50% {
+        background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    }
+    100% {
+        background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    }
 }
 
 /* Header */
 header {
-    background-color: #ff6f61; /* Fond de la bannière en rouge-orange */
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
     color: white;
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: headerAnimation 5s infinite alternate;
+}
+
+@keyframes headerAnimation {
+    0% {
+        background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    }
+    50% {
+        background: linear-gradient(135deg, #ffcc00, #ff6f61);
+    }
+    100% {
+        background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    }
 }
 
 h1 {
@@ -27,13 +53,46 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #ffcc00; /* Écriture du titre en jaune */
+    animation: fadeIn 2s ease-in-out, colorChange 5s infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff6f61;
+    }
+    50% {
+        color: #ffcc00;
+    }
+    100% {
+        color: #ff6f61;
+    }
 }
 
 /* Section d'introduction */
 .intro {
     margin: 40px 20px;
     text-align: center;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .intro img {
@@ -42,6 +101,12 @@ h1 {
     margin-top: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Historique, règles, conclusion */
@@ -51,14 +116,31 @@ h1 {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.historique:hover, .regles:hover, .conclusion:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
     font-size: 2em;
     margin-bottom: 15px;
-    color: #ff6f61; /* Titres des sections en rouge-orange */
+    color: #ff6f61;
     text-transform: uppercase;
     letter-spacing: 1px;
+    animation: colorChange 5s infinite alternate;
 }
 
 p {
@@ -77,6 +159,7 @@ table {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.5s ease-in-out;
 }
 
 th, td {
@@ -85,7 +168,7 @@ th, td {
 }
 
 th {
-    background-color: #ff6f61; /* En-tête du tableau en rouge-orange */
+    background-color: #ff6f61;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -93,16 +176,34 @@ th {
 
 td {
     background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+td:hover {
+    background-color: #e0f7fa;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background: linear-gradient(135deg, #333, #222);
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    animation: footerAnimation 5s infinite alternate;
+}
+
+@keyframes footerAnimation {
+    0% {
+        background: linear-gradient(135deg, #333, #222);
+    }
+    50% {
+        background: linear-gradient(135deg, #222, #333);
+    }
+    100% {
+        background: linear-gradient(135deg, #333, #222);
+    }
 }
 
 footer p {
@@ -110,12 +211,36 @@ footer p {
     margin: 0;
 }
 
+/* Effets supplémentaires */
+.historique::before, .regles::before, .conclusion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 111, 97, 0.1);
+    z-index: -1;
+    border-radius: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.historique:hover::before, .regles:hover::before, .conclusion:hover::before {
+    opacity: 0;
+}
+
 /* Boutons (si vous en ajoutez) */
 button {
-    background-color: #ff6f61; /* Boutons en rouge-orange */
+    background-color: #ff6f61;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
 }
